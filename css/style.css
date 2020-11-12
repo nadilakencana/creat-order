@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&family=Montserrat&family=Open+Sans&family=Philosopher:ital@1&display=swap');
+
+
+/* buat ngeposisi.in si body biar scrollspy-nya bsa jalan */
+body {
+    position: relative;
+}
+
+#isi {
+    font-family: 'Caveat', cursive;
+    font-size: 24pt;
+     
+}
+
+#judul {
+    font-family: 'Acme', sans-serif;
+
+}
+h4{
+    font-family: 'Philosopher', sans-serif;
+
+}
