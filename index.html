@@ -11,135 +11,133 @@
     <div class="bg-light">
         <div class="container">
             <h2>Creat Order</h2>
+            <form class="needs-validation" novalidate name="form" method="POST" onsubmit="Validasi()">
             <!--Detail-->
-            <div class="row row-cols-2">
-                <div class="col">
-                    <h3>Detail</h3>
-                </div>
-                <form class="needs-validation" novalidate>
+                <div class="row row-cols-2" id="detail" name="detail">
                     <div class="col">
-                        <div>
-                            <span class="required_notification"><label for="validationCustom04">Name*</label></span>
-                            <div class="input-group">
-                                <select class="custom-select" id="validationCustom04" aria-label="Example select with button addon" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="1">Tiger Nixon</option>
-                                    <option value="2">Garrett Winters</option>
-                                    <option value="3">Ashton Cox</option>
-                                    <option value="4">Cendric Kelly</option>
-                                    <option value="5">Airi Satao</option>
-                                    <option value="6">Brielle Williamson</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="required_notification"><label for="validationCustom04">Distributor Center*</label></span>
-                            <div class="input-group">
-                                <select class="custom-select" id="validationCustom04" aria-label="Example select with button addon" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="1">DC Tangerang</option>
-                                    <option value="2">DC Balaraja</option>
-                                    
-                                 </select>
-                            </div>
-                        </div>
-                        <div class="row row-cols-2">
-                            <div class="col">
-                                <span class="required_notification"><label for="validationCustom04">Payment Type*</label></span>
-                                <div class="input-group">
-                                    <select class="custom-select" id="validationCustom04" aria-label="Example select with button addon" required>
-                                        <option selected disabled value="">Choose...</option>
-                                        <option value="1">Cash H+1</option>
-                                        <option value="2">Cash H+3</option>
-                                        <option value="3">Cash H+7</option>
-                                        <option value="4">Transfer H+1</option>
-                                        <option value="5">Transfer H+3</option>
-                                        <option value="6">Transfer H+7</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <span class="required_notification"><label for="example-date-input">Expired Date*</label></span>
-                                <div>
-                                    <input class="form-control" type="date" value="" id="example-date-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                                <label for="exampleTextarea">Notes</label>
-                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                        </div>
+                        <h3>Detail</h3>
                     </div>
-                </form>
-            </div>
-            <!--End Detail-->
-            
-            <hr class="my-4">
-            <!--product-->
-            <div class="row row-cols-2">
-                <div class="col">
-                    <h3>Products</h3>
-                </div>
-                <form class="needs-validation" novalidate name="formproduct">
-                    <div class="col">
-                        <div class="row row-cols-2">
-                            <div class="col-md-8">
-                                <span class="required_notification"><label for="validationCustom04">Products*</label></span>
+                        <div class="col">
+                            <div>
+                                <span class="required_notification"><label for="validationCustom04">Name*</label></span>
                                 <div class="input-group">
-                                    <select class="custom-select" id="product" name="product">
+                                    <select class="custom-select" id="nama" aria-label="Example select with button addon" name="nama">
                                         <option selected disabled value="">Choose...</option>
-                                        <option value="mie">Indomie rebus</option>
-                                        <option value="susu">Susu kaleng</option>
-                                        <option value="aqua">Aqua</option>
-                                        <option value="indomilk">Indomilk</option>
+                                        <option value="1">Tiger Nixon</option>
+                                        <option value="2">Garrett Winters</option>
+                                        <option value="3">Ashton Cox</option>
+                                        <option value="4">Cendric Kelly</option>
+                                        <option value="5">Airi Satao</option>
+                                        <option value="6">Brielle Williamson</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <span class="required_notification"><label >Unit*</label></span>
+                            <div>
+                                <span class="required_notification"><label for="validationCustom04">Distributor Center*</label></span>
                                 <div class="input-group">
-                                    <select class="custom-select" id="unit"  aria-label="Example select with button addon" name="unit" onchange="Price()">
+                                    <select class="custom-select" id="dc" aria-label="Example select with button addon" name="dc">
                                         <option selected disabled value="">Choose...</option>
-                                        <option value="dus">Dus</option>
-                                        <option value="karton">Karton</option>
-                                        <option value="peak">Peak</option>
+                                        <option value="1">DC Tangerang</option>
+                                        <option value="2">DC Balaraja</option>
+                                        
                                     </select>
                                 </div>
+                            </div>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <span class="required_notification"><label for="validationCustom04">Payment Type*</label></span>
+                                    <div class="input-group">
+                                        <select class="custom-select" id="payment"  nama="payment" aria-label="Example select with button addon" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option value="1">Cash H+1</option>
+                                            <option value="2">Cash H+3</option>
+                                            <option value="3">Cash H+7</option>
+                                            <option value="4">Transfer H+1</option>
+                                            <option value="5">Transfer H+3</option>
+                                            <option value="6">Transfer H+7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="required_notification"><label for="example-date-input">Expired Date*</label></span>
+                                    <div>
+                                        <input class="form-control" type="date" value="" id="date" name="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleTextarea">Notes</label>
+                                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                             </div>
                         </div>
-                        <div class="row row-cols-3">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="exampleTextarea">Quantity*</label>
-                                    <textarea class="form-control" id="jumlah" rows="1" name="jumlah" oninput="TotalPrice()"></textarea>
+                </div>
+                <!--End Detail-->
+                
+                <hr class="my-4">
+                <!--product-->
+                <div class="row row-cols-2" id="formproduct" name="formproduct">
+                    <div class="col">
+                        <h3>Products</h3>
+                    </div>
+                        <div class="col">
+                            <div class="row row-cols-2">
+                                <div class="col-md-8">
+                                    <span class="required_notification"><label for="validationCustom04">Products*</label></span>
+                                    <div class="input-group">
+                                        <select class="custom-select" id="product" name="product">
+                                            <option selected disabled value="">Choose...</option>
+                                            <option value="mie">Indomie rebus</option>
+                                            <option value="susu">Susu kaleng</option>
+                                            <option value="aqua">Aqua</option>
+                                            <option value="indomilk">Indomilk</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="required_notification"><label >Unit*</label></span>
+                                    <div class="input-group">
+                                        <select class="custom-select" id="unit"  aria-label="Example select with button addon" name="unit" onchange="Price()">
+                                            <option selected disabled value="">Choose...</option>
+                                            <option value="dus">Dus</option>
+                                            <option value="karton">Karton</option>
+                                            <option value="peak">Peak</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="exampleTextarea">Price*</label>
-                                       <input type="text" class="form-control" id="price" rows="1" name="price">
+                            <div class="row row-cols-3">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Quantity*</label>
+                                        <textarea class="form-control" id="jumlah" rows="1" name="jumlah" oninput="TotalPrice()"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleTextarea">Total Price*</label>
-                                    <input  type="text" class="form-control" id="total" rows="1" name="total" ></input>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Price*</label>
+                                        <input type="text" class="form-control" id="price" rows="1" name="price">
+                                    </div>
                                 </div>
-                                <hr class="my-4">
-                                <div class="form-group">
-                                    <label for="exampleTextarea"><b>Total Nett Price</b></label>
-                                    <textarea class="form-control" id="exampleTextarea" rows="1" name="net"></textarea>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Total Price*</label>
+                                        <input  type="text" class="form-control" id="total" rows="1" name="total" ></input>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="form-group">
+                                        <label for="exampleTextarea"><b>Total Nett Price</b></label>
+                                        <textarea class="form-control" id="net" rows="1" name="net"></textarea>
+                                    </div>
                                 </div>
+                                
                             </div>
                             
-                        </div>
-                        
-                    </div>
-                </form>
-            </div>
+                        </div> 
+                </div>
+            </form>
             <!--end Product-->
-            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Cencel</a>
-            <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Create</a>
+            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="">Cencel</a>
+            <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true" onclick="Creat()" id="creat" name="creat" di>Create</a>
         </div>
     </div>
    
@@ -152,6 +150,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script  src="js/main.js"></script>
 
